@@ -22,10 +22,17 @@
     console.log(allUniqueCharacters("AaBbCc")); // Expected output: true
     
 */
+    function allUniqueCharacters(s) {
+  const seen = new Set();
 
-function allUniqueCharacters(s) {
-  //Place your solution here:
-  //return false;
+  for (let char of s) {
+    if (seen.has(char)) {
+      return false;
+    }
+    seen.add(char);
+  }
+
+  return true;
 }
 
 // Example usage:
