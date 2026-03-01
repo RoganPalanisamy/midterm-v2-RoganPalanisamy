@@ -35,3 +35,10 @@
   return true;
 }
 
+    console.log(allUniqueCharacters("abcdef")); // Expected output: true
+    console.log(allUniqueCharacters("hello")); // Expected output: false
+    console.log(allUniqueCharacters("1234567890")); // Expected output: true
+    console.log(allUniqueCharacters("112233")); // Expected output: false
+    console.log(allUniqueCharacters("")); // Expected output: true
+    console.log(allUniqueCharacters("AaBbCc")); // Expected output: true
+
