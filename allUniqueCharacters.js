@@ -22,7 +22,6 @@
     console.log(allUniqueCharacters("AaBbCc")); // Expected output: true
     
 */
-
 function allUniqueCharacters(s) {
   const seen = new Set();
 

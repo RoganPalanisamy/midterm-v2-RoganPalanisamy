@@ -6,13 +6,12 @@ Create a function named getInitials that receives a string of words. It should r
 */
 
 const getInitials = function (name) {
-  // Place your solution here
-};
+  return name
+    .trim()
+    .split(/\s+/)
+    .map(word => word[0].toUpperCase())
+    .join('');
 
-console.log(getInitials("World Wide Web")); // "WWW"
-console.log(getInitials("central intelligence agency")); // "CIA"
-console.log(getInitials("john doe")); // "JD"
-console.log(getInitials("New York City")); // "NYC"
-console.log(getInitials("  spaced   out ")); // "SO"
+};
 
 module.exports = getInitials;
