@@ -6,7 +6,13 @@ Create a function named calculateTotal that receives an array of item objects. E
 */
 
 const calculateTotal = function (cart) {
-  // Place your solution here
+  let total = 0;
+
+  for (let item of cart) {
+    total += item.price * item.quantity;
+  }
+
+  return total;
 };
 
 const myCart = [
