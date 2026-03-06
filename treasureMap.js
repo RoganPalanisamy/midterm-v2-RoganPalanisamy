@@ -9,10 +9,25 @@ It must return an object with this structure:
   coordinates: [ [x, y], [x, y] ... ]
 }
 */
-
 const treasureMap = function (grid) {
-  // Place your solution here
+  let treasureCount = 0;
+  let coordinates = [];
+
+  for (let y = 0; y < grid.length; y++) {
+    for (let x = 0; x < grid[y].length; x++) {
+      if (grid[y][x] === "X") {
+        treasureCount++;
+        coordinates.push([x, y]);
+      }
+    }
+  }
+
+  return {
+    treasureCount,
+    coordinates
+  };
 };
+
 
 const map1 = [
   ["O", "O", "X", "O"],
@@ -45,5 +60,6 @@ console.log(treasureMap(map3));
 //   treasureCount: 4,
 //   coordinates: [ [0, 0], [0, 2], [1, 2], [2, 3] ]
 // }
+
 
 module.exports = treasureMap;
